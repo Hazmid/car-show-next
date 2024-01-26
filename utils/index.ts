@@ -1,3 +1,5 @@
+import { CarProps } from "@/types";
+
 export async function fetchCars() {
   try {
     const headers = {
@@ -6,7 +8,7 @@ export async function fetchCars() {
     };
 
     const response = await fetch(
-      "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla",
+      "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera",
       {
         headers: headers,
       }
@@ -34,3 +36,7 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
   return rentalRatePerDay.toFixed(0);
 };
+
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+
+}
